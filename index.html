@@ -10,7 +10,7 @@
   <h1>WebSocket Client v-0.4.1.1-58</h1>
   <p>This page acts as a WebSocket Javascript Client.</p>
   Remember use "wss://" not "https"  also needs a slash on the end "/"<br>
-<input size=90 type=text id="myGitpod" value="wss://8080-hpssjellis-gitpodporten-711044i7uve.ws-us80.gitpod.io/" onchange="{
+<input size=90 type=text id="myGitpod" value="wss://4fh42v-8080.preview.csb.app/" onchange="{
                                                                                                                            
   //alert(this.value);                                                                                                                           
 }"><br>
@@ -27,10 +27,10 @@
         reader.onload = () => {
            console.log('Result: ' + reader.result);
            document.getElementById('myDiv01').innerHTML = 'reader.result: '+ reader.result + '<br>' + document.getElementById('myDiv01').innerHTML ;
-           var string = reader.result;
-           var buffer = btoa(string);
-           var data2 = 'data:image/png;base64,'+buffer;
-           var image = document.getElementById('myImage');
+           let string = reader.result;
+           let buffer = btoa(string);
+           let data2 = 'data:image/png;base64,'+buffer;
+           let image = document.getElementById('myImage');
            image.src = data2;
          };
        // reader.readAsText(event.data);
@@ -67,7 +67,7 @@
   var c = document.getElementById('myCanvas');
   var ctx = c.getContext('2d');
   ctx.globalalpha = 0.3;
-  for(var i=0; i<1000; i++) {
+  for(var i=0; i<100; i++) {
     ctx.beginPath();
     var r = Math.floor(Math.random() * 256);
     var g = Math.floor(Math.random() * 256);
@@ -83,7 +83,7 @@
   var c = document.getElementById('myCanvas');
   var ctx = c.getContext('2d');
   myWebSocket.binaryType = 'arraybuffer';
-  var data = ctx.getImageData(0, 0, 200, 200).data;
+  var data = ctx.getImageData(0, 0, 16, 16).data;  // much smaller
   var byteArray = new Uint8Array(data);
   myWebSocket.send(byteArray.buffer);
 }"><br><br>
@@ -105,10 +105,10 @@
 }"><br> 
   
   
-  
-      <canvas id="myCanvas" width="200" height="200"></canvas>
-  <div id="myDiv01"></div>
-  <image id="myImage" src="">
+   <div id="myDiv01"></div>
+  <image id="myImage" src=""> 
+  <canvas id="myCanvas" width="200" height="200"></canvas>
+
 </body>
 </html>
 
