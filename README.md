@@ -3,10 +3,10 @@
 
 My codesandbox
 
-https://codesandbox.io/p/github/hpssjellis/codesandbox-websocket/draft/nifty-wave?file=%2Fapp.js
+https://codesandbox.io/p/github/hpssjellis/codesandbox-websocket/main?file=%2Findex.html
 
-demo running at  https://enfqyo-8080.preview.csb.app/
+demo running at  https://4fh42v-8080.preview.csb.app/
 
 
 
-webpage socekt at  https://enfqyo-8080.preview.csb.app/public/static-html04.html
+Use this websocket  wss://4fh42v-8080.preview.csb.app/
