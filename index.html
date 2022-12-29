@@ -39,8 +39,10 @@
         console.log('Result: ' + event.data);    
        // document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(reader.result))   +'<br>' + document.getElementById('myDiv01').innerHTML ;
       //  document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data   +'<br>' + document.getElementById('myDiv01').innerHTML ;
-      document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(event.data ))  +'<br>' + document.getElementById('myDiv01').innerHTML ;
-//document.getElementById('myDiv01').innerHTML = 'event.data: '+ JSON.stringify(event.data) + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(event.data ))  +'<br>' + document.getElementById('myDiv01').innerHTML ;
+ //document.getElementById('myDiv01').innerHTML = 'event.data: '+ JSON.stringify(event.data) + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(event.data ))  +'<br>' + document.getElementById('myDiv01').innerHTML ;
+ 
+   // for speed don't show                                         
+ // document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(event.data ))  +'<br>' + document.getElementById('myDiv01').innerHTML ;
                                               
     }
                                      
