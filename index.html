@@ -25,8 +25,12 @@
         if (event.data instanceof Blob ) {
         reader = new FileReader();
         reader.onload = () => {
-           console.log('Result: ' + reader.result);
-           document.getElementById('myDiv01').innerHTML = 'reader.result: '+ reader.result + '<br>' + document.getElementById('myDiv01').innerHTML ;
+                                            
+            // slows it                                
+          // console.log('Result: ' + reader.result);
+          // document.getElementById('myDiv01').innerHTML = 'reader.result: '+ reader.result + '<br>' + document.getElementById('myDiv01').innerHTML ;
+                                            
+                                            
            let string = reader.result;
            let buffer = btoa(string);
            let data2 = 'data:image/png;base64,'+buffer;
@@ -36,13 +40,14 @@
        // reader.readAsText(event.data);
        reader.readAsBinaryString(event.data);
     } else {
-        console.log('Result: ' + event.data);    
        // document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(reader.result))   +'<br>' + document.getElementById('myDiv01').innerHTML ;
       //  document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data   +'<br>' + document.getElementById('myDiv01').innerHTML ;
  //document.getElementById('myDiv01').innerHTML = 'event.data: '+ JSON.stringify(event.data) + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(event.data ))  +'<br>' + document.getElementById('myDiv01').innerHTML ;
  
-   // for speed don't show                                         
- // document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(event.data ))  +'<br>' + document.getElementById('myDiv01').innerHTML ;
+
+                                            
+    console.log('Result: ' + event.data);    
+  document.getElementById('myDiv01').innerHTML = 'event.data: '+ event.data + ' or: ' + String.fromCharCode.apply(null, new Uint8Array(event.data ))  +'<br>' + document.getElementById('myDiv01').innerHTML ;
                                               
     }
                                      
